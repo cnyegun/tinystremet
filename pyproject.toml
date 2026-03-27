@@ -1,0 +1,13 @@
+[project]
+name = "tinystremet"
+version = "0.1.0"
+description = "Stremet unit tracking MVP API"
+requires-python = ">=3.14"
+dependencies = [
+    "fastapi>=0.135.2,<0.136",
+    "psycopg[binary]>=3.3.3,<3.4",
+    "uvicorn>=0.42.0,<0.43",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

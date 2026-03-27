@@ -2,6 +2,7 @@ import os
 import shutil
 import socket
 import subprocess
+import sys
 import tempfile
 import time
 import uuid
@@ -12,6 +13,9 @@ import pytest
 
 ROOT = Path(__file__).resolve().parents[1]
 DB_DIR = ROOT / "db"
+
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
 
 
 def _free_port() -> int:
